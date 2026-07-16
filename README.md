@@ -1,71 +1,74 @@
-#  BMI Calculator
+# Python Internship Projects
 
-A simple Python-based Body Mass Index (BMI) Calculator that calculates a user's BMI using their weight and height and classifies it according to standard BMI categories.
-
-##  Features
-
-- Calculate Body Mass Index (BMI)
-- Categorize BMI as:
-  - Underweight
-  - Normal Weight
-  - Overweight
-  - Obese
-- Input validation
-- Handles invalid (non-numeric) input using exception handling
-
-##  Technologies Used
-
-- Python 3
-
-##  Project Structure
-
-```
-BMI-Calculator/
-│
-├── BMI_Calculator.py
-├── test_BMI_Calculator.py
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
-
-##  How to Run
-
-1. Go to the project folder:
-
-```bash
-cd BMI-Calculator
-```
-
-2. Run the program:
-
-```bash
-python BMI_Calculator.py
-```
-
-##  Sample Output
-
-```
-===== BMI Calculator =====
-Enter your weight (kg): 60
-Enter your height (meters): 1.65
-
-Your BMI is: 22.04
-Category: Normal weight
-```
-
-##  BMI Categories
-
-| BMI | Category |
-|------|----------|
-| Below 18.5 | Underweight |
-| 18.5 - 24.9 | Normal Weight |
-| 25.0 - 29.9 | Overweight |
-| 30.0 and above | Obese |
-
-## Author
-
-**Ayela Ahsan**
+Welcome to the collection of Python projects developed during my internship. This repository houses standalone applications showcasing Object-Oriented Programming (OOP), input validation, unit testing, and GUI development in Python.
 
 ---
-If you found this project helpful, feel free to star the repository.
+
+## Repository Structure
+
+```text
+Python_AI-/
+│
+├── BMI-Calculator/           # Graphical & CLI BMI calculation project
+│   ├── BMI_Calculator.py     # Core CLI implementation
+│   ├── test_BMI_Calculator.py# Unit tests for calculations
+│   └── requirements.txt      # Dependencies
+│
+└── Student-Management-System/ # OOP-based student tracking project
+    ├── student_management.py # Main OOP implementation
+    ├── test_student_management.py # Unit tests for students log
+    └── requirements.txt      # Dependencies
+```
+
+---
+
+## Projects Included
+
+### 1. [BMI Calculator](./BMI-Calculator/)
+A command-line based (and expandable GUI-based) Body Mass Index calculator.
+- **Key Features**: 
+  - Weight categorization (Underweight, Normal, Overweight, Obese).
+  - Validation for inputs greater than zero.
+  - Comprehensive unit testing.
+- **Run the CLI app**:
+  ```bash
+  cd BMI-Calculator
+  python BMI_Calculator.py
+  ```
+
+### 2. [Student Management System](./Student-Management-System/)
+An Object-Oriented Programming (OOP) console application to manage student logs.
+- **Key Features**:
+  - Add, search, delete, and list students.
+  - Custom properties and private attributes (Encapsulation).
+  - Input validation for Roll Numbers, Names, and Ages.
+- **Run the app**:
+  ```bash
+  cd Student-Management-System
+  python student_management.py
+  ```
+
+---
+
+## Running All Unit Tests
+
+Each project includes unit tests. To run tests:
+
+**For BMI Calculator**:
+```bash
+cd BMI-Calculator
+python -m unittest test_BMI_Calculator.py
+```
+
+**For Student Management System**:
+```bash
+cd Student-Management-System
+python -m unittest test_student_management.py
+```
+
+---
+
+## Author
+**Ayela Ahsan**
+- GitHub: [ayela-ahsan](https://github.com/ayela-ahsan)
+- Email: ayelaahsan@gmail.com
