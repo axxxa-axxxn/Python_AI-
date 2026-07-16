@@ -16,9 +16,17 @@ class Student:
     def name(self):
         return self.__name
 
+    @name.setter
+    def name(self, value):
+        self.__name = value
+
     @property
     def age(self):
         return self.__age
+
+    @age.setter
+    def age(self, value):
+        self.__age = value
 
     def __str__(self):
         return (
@@ -52,7 +60,6 @@ class StudentManagementSystem:
             print("Roll Number cannot be empty.")
             return
 
-        # Prevent duplicate roll numbers
         for student in self.students:
             if student.roll_no == roll_no:
                 print("Roll Number already exists.")
@@ -90,6 +97,43 @@ class StudentManagementSystem:
             if student.roll_no == roll_no:
                 self.students.remove(student)
                 print("Student deleted successfully!")
+                return
+
+        print("Student not found.")
+
+    def update_student(self):
+        """
+        Update student information using roll number.
+        """
+        roll_no = input("Enter Roll Number to update: ").strip()
+
+        for student in self.students:
+            if student.roll_no == roll_no:
+
+                print("\nCurrent Student Details:")
+                print(student)
+
+                name = input("Enter New Name: ").strip()
+
+                if not name:
+                    print("Name cannot be empty.")
+                    return
+
+                try:
+                    age = int(input("Enter New Age: "))
+
+                    if age <= 0:
+                        print("Age must be greater than 0.")
+                        return
+
+                except ValueError:
+                    print("Age must be a number.")
+                    return
+
+                student.name = name
+                student.age = age
+
+                print("Student updated successfully!")
                 return
 
         print("Student not found.")
@@ -133,21 +177,30 @@ class StudentManagementSystem:
             print("2. Delete Student")
             print("3. Show Students")
             print("4. Search Student")
-            print("5. Exit")
+            print("5. Update Student")
+            print("6. Exit")
 
             choice = input("Enter your choice: ").strip()
 
             if choice == "1":
                 self.add_student()
+
             elif choice == "2":
                 self.delete_student()
+
             elif choice == "3":
                 self.show_students()
+
             elif choice == "4":
                 self.search_student()
+
             elif choice == "5":
+                self.update_student()
+
+            elif choice == "6":
                 print("Program Ended.")
                 break
+
             else:
                 print("Invalid choice. Please try again.")
 

@@ -8,6 +8,7 @@ A simple console-based Student Management System built using Python and Object-O
 
 - Add Student
 - Delete Student
+- Update Student
 - Search Student
 - Show All Students
 - Prevent Duplicate Roll Numbers
