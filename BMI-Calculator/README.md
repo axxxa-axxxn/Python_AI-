@@ -1,25 +1,29 @@
-#  BMI Calculator
+# BMI Calculator
 
 A simple Python-based Body Mass Index (BMI) Calculator that calculates a user's BMI using their weight and height and classifies it according to standard BMI categories.
 
-##  Features
+## Features
 
 - Calculate Body Mass Index (BMI)
+- Height input in centimeters (cm)
+- Automatic conversion from centimeters to meters
 - Categorize BMI as:
   - Underweight
   - Normal Weight
   - Overweight
   - Obese
-- Input validation
+- Positive input validation
+- Realistic weight validation (10–500 kg)
+- Realistic height validation (50–300 cm)
 - Handles invalid (non-numeric) input using exception handling
 
-##  Technologies Used
+## Technologies Used
 
 - Python 3
 
-##  Project Structure
+## Project Structure
 
-```
+```text
 BMI-Calculator/
 │
 ├── BMI_Calculator.py
@@ -29,7 +33,7 @@ BMI-Calculator/
 └── .gitignore
 ```
 
-##  How to Run
+## How to Run
 
 1. Go to the project folder:
 
@@ -43,18 +47,27 @@ cd BMI-Calculator
 python BMI_Calculator.py
 ```
 
-##  Sample Output
+## Sample Output
 
-```
+```text
 ===== BMI Calculator =====
 Enter your weight (kg): 60
-Enter your height (meters): 1.65
+Enter your height (cm): 165
 
 Your BMI is: 22.04
 Category: Normal weight
 ```
 
-##  BMI Categories
+## Input Validation
+
+The program validates user input by checking:
+
+- Weight and height must be greater than zero.
+- Weight must be between **10 kg and 500 kg**.
+- Height must be between **50 cm and 300 cm**.
+- Only numeric values are accepted.
+
+## BMI Categories
 
 | BMI | Category |
 |------|----------|
@@ -68,4 +81,4 @@ Category: Normal weight
 **Ayela Ahsan**
 
 ---
-If you found this project helpful, feel free to star the repository.
+If you found this project helpful, feel free to ⭐ star the repository.
